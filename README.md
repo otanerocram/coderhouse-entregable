@@ -1,9 +1,4 @@
-# Nombre de APP
-# TIENDA-RENATO-BELTRAN
-
-
-
-# Getting Started with Create React App
+# Estructura Base para proyecto Tienda en Línea con REACT
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
