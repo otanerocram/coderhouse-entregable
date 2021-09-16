@@ -2,3 +2,18 @@
   background-color: red;
   height: 100vh;
 }
+
+.cart-item-count{
+ font-size: 14px !important;
+ color: red
+}
+
+.cart-item-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-top: 13px;
+  padding-right: 16px;
+  color: #4c5377;
+  font-size: 16px;
+}
