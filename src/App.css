@@ -12,8 +12,8 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
-  padding-top: 13px;
-  padding-right: 16px;
+  padding-right: 36px;
   color: #4c5377;
   font-size: 16px;
+  align-items: center;
 }

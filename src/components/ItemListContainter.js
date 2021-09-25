@@ -1,15 +1,12 @@
 /* Entregable 03 */
-import React, {useState} from 'react'
 
 function ItemListContainter(props) {
-
-    const [itemCount, setitemCount] = useState(props.count)
-
-    const itemCountTag = itemCount > 0  ? (<span class="badge bg-primary cart-item-count">{props.count}</span>) : "";
-
-    return (
-        itemCountTag
-    )
+  const { greeting } = props;
+  return (
+    <ul className="list-group">
+      <li className="list-group-item">{greeting}</li>
+    </ul>
+  );
 }
 
-export default ItemListContainter
+export default ItemListContainter;
