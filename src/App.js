@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "./App.css";
 // import BannerCarousel from "./components/Carousel";
 import ItemListContainter from "./components/ItemListContainter";
@@ -23,16 +23,20 @@ function App() {
   /* Entregable 04 --> 
     Se declara un array con un item para efectos de prueba
   */
+  
   const product = {
     id: 1,
     item: "Laptop",
     details: "informacion detallada",
     stock: 20,
     initial: 1,
-    onAdd: () => "onAdd"
-  }
+    onAdd: (stock,cantidad) => {
+      alert(`Se agregarán ${cantidad} unidades al carrito`)
+      return stock-cantidad
+    },
+    precio: 100,
+  };
   /* <--- Entregable 04*/
-  
 
   return (
     <>
@@ -60,11 +64,10 @@ function App() {
                 <Card.Title>Laptop Dynabook</Card.Title>
                 <Card.Text>
                   LAPTOP DYNABOOK TECRA A40-G I3-10110U ( PMZ21U-00P009 ) 14" -
-                  I3 - 256 SSD - 8GB. 
+                  I3 - 256 SSD - 8GB.
                 </Card.Text>
-                <p>Cantidad disponible: {product.stock}</p>
-                <ItemCount props={product}/> {/* <-- Entregable 04 */}
-                <Button variant="primary">Agregar al carrito</Button>
+                
+                <ItemCount props={product} /> {/* <-- Entregable 04 */}
               </Card.Body>
             </Card>
             {/* <-- Entregable 04 */}
@@ -74,7 +77,8 @@ function App() {
               Crea un componente contenedor ItemListContainer.js con una prop greeting, 
               muestra el mensaje dentro del contenedor con el styling integrado.
             */}
-            <ItemListContainter greeting="Greetings!" /> {/*<-- Entregable 03 */}
+            <ItemListContainter greeting="Greetings!" />{" "}
+            {/*<-- Entregable 03 */}
             {/* <-- Entregable 03 */}
           </Col>
         </Row>
