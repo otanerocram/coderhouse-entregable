@@ -53,8 +53,8 @@ function ItemCount(props) {
         */}
       <Button
         variant="primary"
-        onClick={(e) => {
-          e.preventDefault(); {/* Evita el trigger automático */}
+        onClick={() => {
+          // e.preventDefault(); {/* Evita el trigger automático */}
           actualStock >= cantidad &&
             setActualStock(onAdd(actualStock, cantidad));
           cantidad > actualStock &&
