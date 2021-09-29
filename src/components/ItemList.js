@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 import { Row, Spinner } from "react-bootstrap";
 
+/* Entregable 05 */
 function ItemList() {
   /* Aqui iria el consumo del API jalando una cantidad X de Items */
-
   const [productList, setproductList] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -57,15 +57,18 @@ function ItemList() {
     }, 2000);
   });
 
-  useEffect(() => {
-    ackData.then((response) => {
-      setproductList(
-        response.map((item, index) => <Item props={item} key={index} />)
-      );
+  ackData.then((response) => {
+    setproductList(
+      response.map((item, index) => <Item props={item} key={index} />)
+    );
 
-      setLoading(false);
-    });
-  }, [ackData]);
+    setLoading(false);
+  });
+
+  useEffect(() => {
+    
+
+  }, []);
 
   return (
     <>
