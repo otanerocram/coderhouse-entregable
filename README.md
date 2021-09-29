@@ -23,7 +23,7 @@ Usa este código para tus propios proyectos
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Soporte: 
-Si neceitas consultar algo, puedes escribirme a ocram@beltren.dev. Incluye el asunto "Ayuda con el proyecto Store Front en react".
+Si necesitas consultar algo, puedes escribirme a ocram@beltren.dev. Incluye el asunto "Ayuda con el proyecto Store Front en React".
 
 <img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
 
