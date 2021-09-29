@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
 import { Container } from "react-bootstrap";
 import "./App.css";
-// import BannerCarousel from "./components/Carousel";
+import BannerCarousel from "./components/Carousel";
 import ItemListContainter from "./components/ItemListContainter";
 
 /* ROADMAP
@@ -42,9 +42,9 @@ function App() {
           <NavBar params={propsNav} />
         </Container>
       </header>
-      {/* <main>
+      <main>
         <BannerCarousel />
-      </main> */}
+      </main>
       {/* <-- Entregable 02 */}
 
       <Container>
