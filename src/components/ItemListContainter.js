@@ -1,16 +1,37 @@
+import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import {Row, Col} from "react-bootstrap"
+import { Row, Col } from "react-bootstrap";
+import laptopData from "./data/latops.json";
 
 /* Entregable 03 */
 function ItemListContainter(props) {
   const { greeting } = props;
+
+  // const [loading, setLoading] = useState(true);
+  const [productList, setproductList] = useState(0);
+
+  useEffect(() => {
+    // Instanciamos una promesa que se resolverá en 2 segundos jalando los datos del archivo laptops.json
+    const ackData = new Promise((resolve, reject) => {
+      setTimeout(function () {
+        resolve(laptopData);
+      }, 2000);
+    });
+
+    // Cuando la promesa sea "resolve" entonces ejecutará la función...
+    ackData.then((response) => {
+      setproductList(response);
+      // setLoading(false);
+    });
+  }, []);
+
   return (
     <>
-    
       <Row className="item-list-container">
         <Col md={1}>{greeting}</Col>
         <Col md={11} className="d-flex justify-content-center">
-          <ItemList />
+          {/* <ItemList /> */}
+          <ItemList items={productList} />
         </Col>
       </Row>
     </>
