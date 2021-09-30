@@ -23,7 +23,7 @@ function Item(props) {
           <Card.Title>{title}</Card.Title>
           <Card.Text>
             <span style={{ textAlign: "center" }}>
-              SKU: <Badge bg="success">{id}</Badge>
+              <Badge bg="success">SKU: {id}</Badge>
             </span>
             <br />
             <span>{description}</span>
