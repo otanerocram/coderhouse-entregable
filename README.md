@@ -10,7 +10,7 @@ Este es un proyecto en desarrollo para el curso ReactJS en CoderHouse. Es un Sto
 [Code SandBox!](https://githubbox.com/otanerocram/coderhouse-entregable)
 
 ## Instalación:
-Download Code, move to the folder and run `npm install`, then run `npm start`
+Download Code, move to your project folder and run `npm install`, then run `npm start`
 
 ## Uso: 
 Usa este código para tus propios proyectos
