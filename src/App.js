@@ -49,7 +49,7 @@ function App() {
 
       <Container>
         {/* Entregable 03 --> */}
-        <ItemListContainter greeting="Greetings!" />
+        <ItemListContainter />
         {/* <-- Entregable 03 */}
       </Container>
     </>

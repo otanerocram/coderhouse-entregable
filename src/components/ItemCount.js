@@ -1,11 +1,11 @@
 // Entregable 04 ->
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { InputGroup, Button, FormControl } from "react-bootstrap";
 
 function ItemCount(props) {
-  // Desestructuramos las props
-  const { stock, initial, onAdd } = props.props;
 
+  const { stock, initial, onAdd } = props.props;
+  
   // Inicializamos los hooks y pasamos variables
   const [cantidad, setCantidad] = useState(initial);
   const [actualStock, setActualStock] = useState(stock);
@@ -23,13 +23,9 @@ function ItemCount(props) {
     }
   };
 
-  useEffect(() => {
-    // To do
-  }, [actualStock]);
-
   return (
-    <div>
-      <p>Cantidad disponible: {actualStock}</p>
+    <>
+      <span>Cantidad disponible: {actualStock}</span>
       <InputGroup className="mb-3 form-calculator-minmax">
         <Button
           variant="outline-secondary"
@@ -54,7 +50,6 @@ function ItemCount(props) {
       <Button
         variant="primary"
         onClick={() => {
-          // e.preventDefault(); {/* Evita el trigger automático */}
           actualStock >= cantidad &&
             setActualStock(onAdd(actualStock, cantidad));
           cantidad > actualStock &&
@@ -63,7 +58,7 @@ function ItemCount(props) {
       >
         Agregar al carrito
       </Button>
-    </div>
+    </>
   );
 }
 

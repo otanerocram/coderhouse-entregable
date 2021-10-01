@@ -1,38 +1,20 @@
 import { Card, Badge } from "react-bootstrap";
-import ItemCount from "./ItemCount";
+// import ItemCount from "./ItemCount";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 function Item(props) {
-  const { id, title, description, price, pictureUrl, stock } = props.props;
-  /* Entregable 04 --> */
-  const product = {
-    stock: stock,
-    initial: 1,
-    onAdd: (stock, cantidad) => {
-      alert(`Se agregarán ${cantidad} unidades al carrito`);
-      return stock - cantidad;
-    },
-    precio: price,
-  };
-  /* <--- Entregable 04*/
+  const { title, pictureUrl, stock } = props.props;
 
   return (
     <div className="col-sm-6 col-md-3">
       <Card>
-        <Card.Img variant="top" src={pictureUrl} width="80%" />
+        <Card.Img variant="top" src={pictureUrl} width="60%" />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>
-            <span style={{ textAlign: "center" }}>
-              <Badge bg="success">SKU: {id}</Badge>
-            </span>
-            <br />
-            <span>{description}</span>
-            <br />
-            <span>
-              <Badge bg="danger">Precio: ${price}</Badge>
-            </span>
+          <Card.Text style={{ textAlign: "center" }}>
+            <Badge bg="success">Stock: {stock}</Badge>
           </Card.Text>
-          <ItemCount props={product} /> {/* <-- Entregable 04 */}
+          <ItemDetailContainer props={props.props} />
         </Card.Body>
       </Card>
     </div>

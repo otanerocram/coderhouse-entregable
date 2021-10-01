@@ -16,8 +16,11 @@ Download Code, move to the folder and run `npm install`, then run `npm start`
 Usa este código para tus propios proyectos
 
 ## Roadmap: 
-> En las próximas actualizaciones:
-> - Agregar conexión al API mediante Axios
+> Entrega 06
+> - ItemDetailContainer.js, ItemDetail.js
+> 
+> Por hacer:
+> - react-router-dom
 
 ## Información de Licencia: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

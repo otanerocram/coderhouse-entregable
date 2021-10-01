@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { Row, Col } from "react-bootstrap";
+
 import laptopData from "./data/latops.json";
 
 /* Entregable 03 */
@@ -20,6 +21,7 @@ function ItemListContainter() {
     ackData.then((response) => {
       setproductList(response);
     });
+    
   }, []);
 
   return (
@@ -32,5 +34,7 @@ function ItemListContainter() {
     </>
   );
 }
+
+
 
 export default ItemListContainter;
