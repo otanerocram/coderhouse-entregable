@@ -4,7 +4,7 @@ import CartWidget from "./CartWidget";
 
 const NavBar = (props) => {
   /* Desestructurar la propiedad en constantes */
-  const { storeName, categories } = props.params;
+  const { storeName, categories } = props.storeInfo;
 
   return (
     <>
