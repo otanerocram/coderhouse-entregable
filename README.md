@@ -16,14 +16,11 @@ Download Code, move to your project folder and run `npm install`, then run `npm 
 Usa este código para tus propios proyectos
 
 ## Roadmap: 
-> Entrega 06
-> - ItemDetailContainer.js, ItemDetail.js
+> Entrega 06: 04 Oct 2021 => ItemDetailContainer.js, ItemDetail.js
 > 
-> Entrega 07: 06 Oct 2021
-> - Routing y Navegación 
+> Entrega 07: 06 Oct 2021 => Routing y Navegación 
 > 
-> Lo que viene:
-> - Eventos
+> Lo que viene: - Eventos
 
 ## Changelog:
 Entregables: 
