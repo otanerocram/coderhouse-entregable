@@ -19,8 +19,11 @@ Usa este código para tus propios proyectos
 > Entrega 06
 > - ItemDetailContainer.js, ItemDetail.js
 > 
-> Por hacer:
-> - react-router-dom
+> Entrega 07: 06 Oct 2021
+> - Routing y Navegación 
+> 
+> Lo que viene:
+> - Eventos
 
 ## Información de Licencia: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
