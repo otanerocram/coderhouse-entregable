@@ -21,20 +21,19 @@ function ItemListContainter() {
     ackData.then((response) => {
       setproductList(response);
     });
-    
   }, []);
 
   return (
     <>
       <Row className="item-list-container">
         <Col md={12} className="d-flex justify-content-center">
-          <ItemList items={productList} />
+          <Row>
+            <ItemList items={productList} />
+          </Row>
         </Col>
       </Row>
     </>
   );
 }
-
-
 
 export default ItemListContainter;

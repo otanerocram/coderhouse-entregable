@@ -47,6 +47,11 @@ Crea un ItemDetailContainer.js y un ItemDetail.js en el que se muestren los deta
 - Cambios en las props heredadas desde ItemDetailContainer
 - Implementación de modal bootstrap para mostrar el ItemDetail
 
+07: Implementa el router-dom
+- Encapsulado con BrowserRouter
+- Modificaciones en Navbar.js para que tome parámetros del título y el link del menú
+- Fixed: Se arregló la vista en responsive, agregando un Row antes del ItemList
+
 ## Información de Licencia: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
