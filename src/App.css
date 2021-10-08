@@ -1,27 +1,38 @@
-.fondo-text{
+.fondo-text {
   background-color: red;
   height: 100vh;
 }
 
-.cart-item-count{
- font-size: 14px !important;
- color: red
+.cart-item-count {
+  font-size: 14px !important;
+  color: red;
 }
 
-.cart-item-list{
+.cart-item-list {
   display: flex;
   flex-direction: row;
   justify-content: right;
   padding-right: 36px;
-  color: #4c5377;
-  font-size: 16px;
+  color: #9f01b2;
+  font-size: 1.3rem;
+  font-weight: bold;
   align-items: center;
 }
 
-.item-list-container{
+.item-list-container {
   padding-top: 20px !important;
 }
 
-.my-selected-link{
-  color: #09a454
+.my-selected-link {
+  color: #09a454;
+}
+
+.my-logo {
+  color: #ffc108 !important;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+.cart-widget{
+  background-color: aliceblue;
 }

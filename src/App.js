@@ -1,15 +1,21 @@
 import NavBar from "./components/NavBar";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
-import BannerCarousel from "./components/Carousel";
+
 import ItemListContainter from "./components/ItemList/ItemListContainter";
 import {
   BrowserRouter,
   Switch,
   Route,
-  // useParams,
+  useParams,
+  Link,
   useRouteMatch,
 } from "react-router-dom";
+import Footer from "./components/Footer";
+import HomeContent from "./components/HomeContent";
+import CartWidget from "./components/CartWidget";
+
+// import { useEffect } from "react";
 
 function App() {
   const storeInfo = {
@@ -25,9 +31,12 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar storeInfo={storeInfo} />
+      <div className="cart-widget">
+        <CartWidget></CartWidget>
+      </div>
       <Switch>
         <Route exact path="/">
-          <BannerCarousel />
+          <HomeContent />
         </Route>
         <Route path="/laptops">
           {/* <img style={{maxHeight:404}} src="../assets/laptop-banner.jpg" alt="" /> */}
@@ -36,10 +45,11 @@ function App() {
           </Container>
         </Route>
         {/* <Route path="/:miRuta" children={<UrlHandler />} /> */}
-        <Route path="/categorias">
-          <CategoriesHandler />
+        <Route path="/servers">
+          <ServersHandler />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
@@ -51,12 +61,43 @@ function App() {
 //   return <div>{miRuta}</div>;
 // };
 
-const CategoriesHandler = () => {
+const ServersHandler = () => {
   let { path, url } = useRouteMatch();
-  console.log(`url: ${url}`)
-  console.log(`path: ${path}`)
-  
-  return "holi";
+
+  return (
+    <>
+      <ul>
+        <li>
+          <Link to={`${url}/Lenovo`}>Lenovo</Link>
+        </li>
+        <li>
+          <Link to={`${url}/IBM`}>IBM</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Asus`}>Asus</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <div>Seleccione una marca</div>
+        </Route>
+        <Route path={`${path}/:svrbranch`}>
+          <ServerBranch />
+        </Route>
+      </Switch>
+    </>
+  );
+};
+
+const ServerBranch = () => {
+  let { svrbranch } = useParams();
+
+  return (
+    <>
+      <h1>{svrbranch}</h1>
+    </>
+  );
 };
 
 export default App;
