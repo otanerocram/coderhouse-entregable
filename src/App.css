@@ -9,14 +9,17 @@
 }
 
 .cart-item-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  padding-right: 36px;
-  color: #9f01b2;
-  font-size: 1.3rem;
-  font-weight: bold;
-  align-items: center;
+  font-size: 2rem;
+  color: #fe7f02;
+  padding: 10px 15px;
+}
+
+.cart-widget {
+  background-color: transparent;
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  border-bottom-left-radius: 10px;
 }
 
 .item-list-container {
@@ -33,6 +36,4 @@
   letter-spacing: 0.8px;
 }
 
-.cart-widget{
-  background-color: aliceblue;
-}
+

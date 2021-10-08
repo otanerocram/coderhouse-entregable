@@ -1,15 +1,17 @@
-/* Entregable 03 */
-import React from "react";
+import { Badge } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
-function CartWidget() {
+function CartWidget(props) {
   return (
-    <div className="cart-item-list">
-      {" "}
-      Carrito:  {" "}
-      <FaShoppingCart />
-      &nbsp;{" "}
-    </div>
+    <NavLink to="/cart">
+      <div className="cart-item-list">
+        <FaShoppingCart />{" "}
+        <Badge pill bg="success" style={{ fontSize: 15 }}>
+          0
+        </Badge>
+      </div>
+    </NavLink>
   );
 }
 

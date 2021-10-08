@@ -14,6 +14,7 @@ import {
 import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
 import CartWidget from "./components/CartWidget";
+import CartContainer from "./components/CartContainer";
 
 // import { useEffect } from "react";
 
@@ -37,6 +38,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <HomeContent />
+        </Route>
+        <Route exact path="/cart">
+          <CartContainer/>
         </Route>
         <Route path="/laptops">
           {/* <img style={{maxHeight:404}} src="../assets/laptop-banner.jpg" alt="" /> */}
