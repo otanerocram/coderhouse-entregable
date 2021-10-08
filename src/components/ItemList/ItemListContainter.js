@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { Row, Col } from "react-bootstrap";
 
-import laptopData from "./data/latops.json";
+import laptopData from "../data/latops.json";
 
 /* Entregable 03 */
 function ItemListContainter() {
@@ -21,20 +21,19 @@ function ItemListContainter() {
     ackData.then((response) => {
       setproductList(response);
     });
-    
   }, []);
 
   return (
     <>
       <Row className="item-list-container">
         <Col md={12} className="d-flex justify-content-center">
-          <ItemList items={productList} />
+          <Row>
+            <ItemList items={productList} />
+          </Row>
         </Col>
       </Row>
     </>
   );
 }
-
-
 
 export default ItemListContainter;

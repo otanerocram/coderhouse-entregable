@@ -1,59 +1,103 @@
 import NavBar from "./components/NavBar";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
-import BannerCarousel from "./components/Carousel";
-import ItemListContainter from "./components/ItemListContainter";
 
-/* ROADMAP
+import ItemListContainter from "./components/ItemList/ItemListContainter";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  useParams,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+import Footer from "./components/Footer";
+import HomeContent from "./components/HomeContent";
+import CartWidget from "./components/CartWidget";
 
-Entregables: 
-
-02: 
-Crea una carpeta dentro de src llamada components que contenga a NavBar.js  para crear una barra de menú simple, que tenga:
-- Brand (título/nombre de la tienda)
-- Un listado de categorías clickeables
-- Incorpora alguna librería bootstrap/materialize u otro de tu preferencia (opcional).
-
-03:
-Crea un componente contenedor ItemListContainer.js con una prop greeting, muestra el mensaje dentro del contenedor con el styling integrado.
-
-04: 
-Crea un componente ItemCount.js, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems
-- Se declara un array con un item para efectos de prueba
-
-05: 
-Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red.
-
-
-*/
+// import { useEffect } from "react";
 
 function App() {
-  /* Entregable 02 --> */
-  const propsNav = {
+  const storeInfo = {
     storeName: "InfoTec",
-    categories: ["Laptops", "Pc´s", "Servidores"],
+    categories: [
+      { id: 1, title: "Monitores", link: "/monitors" },
+      { id: 2, title: "Laptops", link: "/laptops" },
+      { id: 3, title: "PCs", link: "/pcs" },
+      { id: 4, title: "Servidores", link: "/servers" },
+    ],
   };
-  /* <-- Entregable 02 */
-  return (
-    <>
-      {/* Entregable 02 -->  */}
-      <header>
-        <Container fluid>
-          <NavBar params={propsNav} />
-        </Container>
-      </header>
-      <main>
-        <BannerCarousel />
-      </main>
-      {/* <-- Entregable 02 */}
 
-      <Container>
-        {/* Entregable 03 --> */}
-        <ItemListContainter />
-        {/* <-- Entregable 03 */}
-      </Container>
-    </>
+  return (
+    <BrowserRouter>
+      <NavBar storeInfo={storeInfo} />
+      <div className="cart-widget">
+        <CartWidget></CartWidget>
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <HomeContent />
+        </Route>
+        <Route path="/laptops">
+          {/* <img style={{maxHeight:404}} src="../assets/laptop-banner.jpg" alt="" /> */}
+          <Container>
+            <ItemListContainter />
+          </Container>
+        </Route>
+        {/* <Route path="/:miRuta" children={<UrlHandler />} /> */}
+        <Route path="/servers">
+          <ServersHandler />
+        </Route>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 }
+
+// const UrlHandler = () => {
+//   let { miRuta } = useParams();
+
+//   console.log({ miRuta });
+//   return <div>{miRuta}</div>;
+// };
+
+const ServersHandler = () => {
+  let { path, url } = useRouteMatch();
+
+  return (
+    <>
+      <ul>
+        <li>
+          <Link to={`${url}/Lenovo`}>Lenovo</Link>
+        </li>
+        <li>
+          <Link to={`${url}/IBM`}>IBM</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Asus`}>Asus</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <div>Seleccione una marca</div>
+        </Route>
+        <Route path={`${path}/:svrbranch`}>
+          <ServerBranch />
+        </Route>
+      </Switch>
+    </>
+  );
+};
+
+const ServerBranch = () => {
+  let { svrbranch } = useParams();
+
+  return (
+    <>
+      <h1>{svrbranch}</h1>
+    </>
+  );
+};
 
 export default App;

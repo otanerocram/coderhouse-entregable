@@ -1,5 +1,5 @@
 import { Spinner } from "react-bootstrap";
-import Item from "./Item";
+import Item from "../ItemDetail/Item";
 
 /* Entregable 05 */
 function ItemList({ items }) {
@@ -13,7 +13,5 @@ function ItemList({ items }) {
     </>
   );
 }
-
-// prueba de modificacion
 
 export default ItemList;

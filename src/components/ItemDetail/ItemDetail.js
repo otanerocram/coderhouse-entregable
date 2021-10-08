@@ -1,5 +1,5 @@
 import { Modal, Card, Badge } from "react-bootstrap";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount";
 
 const ItemDetail = (props) => {
   const { title, stock, price, pictureUrl, description, id } = props.props;
