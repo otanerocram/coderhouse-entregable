@@ -1,31 +1,26 @@
-import NavBar from "./components/NavBar";
-import { Container, Row, Col } from "react-bootstrap";
+import NavBar from "./components/Nav/NavBar";
 import "./App.css";
 
 import ItemListContainter from "./components/ItemList/ItemListContainter";
 import {
   BrowserRouter,
   Switch,
-  Route,
-  useParams,
-  Link,
-  useRouteMatch,
+  Route
 } from "react-router-dom";
 import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
-import CartWidget from "./components/CartWidget";
-import CartContainer from "./components/CartContainer";
-
-// import { useEffect } from "react";
+import CartWidget from "./components/Cart/CartWidget";
+import CartContainer from "./components/Cart/CartContainer";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 
 function App() {
   const storeInfo = {
     storeName: "InfoTec",
     categories: [
-      { id: 1, title: "Monitores", link: "/monitors" },
+      { id: 1, title: "Computadoras", link: "/computers" },
       { id: 2, title: "Laptops", link: "/laptops" },
-      { id: 3, title: "PCs", link: "/pcs" },
-      { id: 4, title: "Servidores", link: "/servers" },
+      { id: 3, title: "Monitores", link: "/monitors" },
+      { id: 4, title: "Accesorios", link: "/accesories" },
     ],
   };
 
@@ -40,68 +35,24 @@ function App() {
           <HomeContent />
         </Route>
         <Route exact path="/cart">
-          <CartContainer/>
+          <CartContainer />
         </Route>
-        <Route path="/laptops">
-          {/* <img style={{maxHeight:404}} src="../assets/laptop-banner.jpg" alt="" /> */}
-          <Container>
-            <ItemListContainter />
-          </Container>
-        </Route>
-        {/* <Route path="/:miRuta" children={<UrlHandler />} /> */}
-        <Route path="/servers">
-          <ServersHandler />
-        </Route>
+
+        {storeInfo.categories.map((elem, idx) => (
+          <Route exact path={elem.link} key={idx}>
+            <ItemListContainter data={elem.title}  />
+          </Route>
+        ))}
+
+        {storeInfo.categories.map((elem, idx) => (
+          <Route path={`${elem.link}/:itemID`} key={idx}>
+            <ItemDetailContainer />
+          </Route>
+        ))}
       </Switch>
       <Footer />
     </BrowserRouter>
   );
 }
-
-// const UrlHandler = () => {
-//   let { miRuta } = useParams();
-
-//   console.log({ miRuta });
-//   return <div>{miRuta}</div>;
-// };
-
-const ServersHandler = () => {
-  let { path, url } = useRouteMatch();
-
-  return (
-    <>
-      <ul>
-        <li>
-          <Link to={`${url}/Lenovo`}>Lenovo</Link>
-        </li>
-        <li>
-          <Link to={`${url}/IBM`}>IBM</Link>
-        </li>
-        <li>
-          <Link to={`${url}/Asus`}>Asus</Link>
-        </li>
-      </ul>
-
-      <Switch>
-        <Route exact path={path}>
-          <div>Seleccione una marca</div>
-        </Route>
-        <Route path={`${path}/:svrbranch`}>
-          <ServerBranch />
-        </Route>
-      </Switch>
-    </>
-  );
-};
-
-const ServerBranch = () => {
-  let { svrbranch } = useParams();
-
-  return (
-    <>
-      <h1>{svrbranch}</h1>
-    </>
-  );
-};
 
 export default App;

@@ -1,12 +1,12 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
   const { storeName, categories } = props.storeInfo;
 
   return (
     <>
-      <Navbar sticky="top" bg="dark" expand="md" variant="dark">
+      <Navbar sticky="top" expand="md" className="my-navbar">
         <Container>
           <NavLink
             to={"/"}
@@ -19,18 +19,19 @@ const NavBar = (props) => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
               className="mr-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
+              style={{ maxHeight: "300px" }}
               navbarScroll
             >
               {categories.map((item, idx) => (
-                <Link
+                <NavLink
                   role="button"
-                  className="nav-link"
+                  className="my-nav-link"
+                  activeClassName="my-selected-link"
                   to={item.link}
                   key={idx}
                 >
                   {item.title}
-                </Link>
+                </NavLink>
               ))}
             </Nav>
           </Navbar.Collapse>

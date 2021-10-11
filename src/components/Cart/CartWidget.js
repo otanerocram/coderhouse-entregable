@@ -6,7 +6,7 @@ function CartWidget(props) {
   return (
     <NavLink to="/cart">
       <div className="cart-item-list">
-        <FaShoppingCart />{" "}
+        <FaShoppingCart />
         <Badge pill bg="success" style={{ fontSize: 15 }}>
           0
         </Badge>

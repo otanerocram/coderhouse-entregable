@@ -1,0 +1,34 @@
+[
+  {
+    "id": "mon01",
+    "title": "Lenovo ThinkVision S27i",
+    "description": "Full HD (1920x1080), HDMI / VGA / Audio / micro borde",
+    "price": 999,
+    "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/5/_/5_25_15.jpg",
+    "stock": 3
+  },
+  {
+    "id": "mon02",
+    "title": "Lenovo ThinkVision P27H",
+    "description": "IPS WLED QHD (2560x1440), HDMI, DP, USB, USB Tipo-C, 16:9, 350 nits, 4 ms, Ajustes de inclinación, altura, giro y pivote (vertical), VESA",
+    "price": 1699,
+    "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/1/_/1_54_36.jpg",
+    "stock": 4
+  },
+  {
+    "id": "mon03",
+    "title": "Lenovo Y27G",
+    "description": "Curvo Gaming WLED 27' Razer Edition, Frecuencia 144Hz Extreme R1800 Panel, Full HD, NVIDIA G-SYNC, HDMI, Display Port, USB 3.0",
+    "price": 1799,
+    "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/1/_/1_35_9.jpg",
+    "stock": 5
+  },
+  {
+    "id": "mon04",
+    "title": "Lenovo Lenovo Q27Q-10",
+    "description": "IPS WLED QHD (2560x1440), HDMI, DP, 16:9, 300 nits, 4 ms, Antirreflectante, AMD FreeSync, VESA",
+    "price": 2499,
+    "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/l/e/lenovo-q27q-1.jpg",
+    "stock": 6
+  }
+]

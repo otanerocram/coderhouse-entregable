@@ -1,9 +1,11 @@
-import { Modal, Card, Badge } from "react-bootstrap";
-import ItemCount from "../ItemCount";
+import { Row, Col, Card } from "react-bootstrap";
+import ItemCount from "./ItemCount";
 
-const ItemDetail = (props) => {
-  const { title, stock, price, pictureUrl, description, id } = props.props;
+const ItemDetail = ({ itemInfo }) => {
+  const { title, stock, price, pictureUrl, description, id } = itemInfo;
+
   const product = {
+    id: id,
     stock: stock,
     initial: 1,
     onAdd: (stock, cantidad) => {
@@ -15,28 +17,31 @@ const ItemDetail = (props) => {
 
   return (
     <>
-      <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Card>
-          <Card.Img variant="top" src={pictureUrl} width="80%" />
-          <Card.Body>
-            <Card.Text>
-              <span style={{ textAlign: "center" }}>
-                <Badge bg="success">SKU: {id}</Badge>
-              </span>
-              <br />
-              <span>{description}</span>
-              <br />
-              <span>
-                <Badge bg="danger">Precio: ${price}</Badge>
-              </span>
-            </Card.Text>
-            <ItemCount props={product} /> {/* <-- Entregable 04 */}
-          </Card.Body>
-        </Card>
-      </Modal.Body>
+      <Row>
+        <Col md={3}> </Col>
+        <Col md={9}>
+          <Card>
+            <Card.Body>
+              <Row>
+                <Col md={6}>
+                  <img
+                    src={pictureUrl}
+                    title={title}
+                    style={{ width: "100%" }}
+                    alt={title}
+                  />
+                </Col>
+                <Col md={6}>
+                  <h1>{title}</h1>
+                  <p>{description}</p>
+                  <p>Precio: S/ {price}</p>
+                  <ItemCount props={product} />
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { Spinner } from "react-bootstrap";
-import Item from "../ItemDetail/Item";
+import Item from "./Item";
 
 /* Entregable 05 */
 function ItemList({ items }) {

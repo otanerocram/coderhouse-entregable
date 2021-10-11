@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+
+.my-navbar {
+  background: linear-gradient(to bottom, #be186a, rgb(129 11 86));
+}
+
+h1 {
+  color: #b41567;
+  font-size: 2rem !important;
+  font-family: "Roboto";
+}
+
 .fondo-text {
   background-color: red;
   height: 100vh;
@@ -10,28 +22,100 @@
 
 .cart-item-list {
   font-size: 2rem;
-  color: #fe7f02;
-  padding: 10px 15px;
+  color: #b31566;
+  padding: 0 15px;
 }
 
 .cart-widget {
-  background-color: transparent;
+  background-color: #ffffff;
   position: fixed;
   z-index: 9;
   right: 0;
-  border-bottom-left-radius: 10px;
+  margin: 10px;
+  border-radius: 10rem;
 }
 
 .item-list-container {
   padding-top: 20px !important;
 }
 
+.my-nav-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: #ffffff;
+  padding: 0 12px;
+  margin: 3px 10px;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.my-nav-link:after {
+  background-color: #fff908;
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  color: black;
+  z-index: -1;
+}
+
+.my-nav-link:hover:after {
+  transform: translate(0, 0);
+}
+
+.my-nav-link:hover {
+  border: 2px solid transparent;
+  color: indigo;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
 .my-selected-link {
-  color: #09a454;
+  color: #fff906 !important;
 }
 
 .my-logo {
-  color: #ffc108 !important;
-  font-weight: bold;
-  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  color: #fff908 !important;
+  font-size: 1.8rem !important;
+  padding-right: 100px;
+}
+
+.navbar-toggler-icon {
+  color: #fff !important;
+}
+
+.actite-item-link{
+  color: rgb(29, 29, 29);
+}
+
+.actite-item-link:hover{
+  color: rgb(29, 29, 29);
+}
+
+.item-link{
+  color: rgb(29, 29, 29);
+  text-decoration: none !important;
+  text-align: center !important
+}
+
+.form-calculator-minmax{
+  width: 50% !important;
+}
+
+.card-img-top{
+  padding: 10px;
 }

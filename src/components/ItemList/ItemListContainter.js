@@ -1,38 +1,64 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import laptopData from "../data/latops.json";
+import computerData from "../data/computers.json";
+import monitorData from "../data/monitors.json";
+import accesoriesData from "../data/accesories.json";
 
 /* Entregable 03 */
-function ItemListContainter() {
+function ItemListContainter({ data }) {
   const [productList, setproductList] = useState(0);
 
+  const [jsonData, setJsonData] = useState(0);
+
   useEffect(() => {
-    // Instanciamos una promesa que se resolverá en 2 segundos
-    // jalando los datos del archivo laptops.json
+    setJsonData(data);
+
     const ackData = new Promise((resolve, reject) => {
+      
       setTimeout(function () {
-        resolve(laptopData);
-      }, 2000);
+        switch (jsonData) {
+          case "Computadoras":
+            resolve(computerData);
+            break;
+
+          case "Laptops":
+            resolve(laptopData);
+            break;
+
+          case "Monitores":
+            resolve(monitorData);
+            break;
+          case "Accesorios":
+            resolve(accesoriesData);
+            break;
+          default:
+            break;
+        }
+      }, 500);
     });
 
-    // Cuando la promesa sea "resolve" entonces ejecutará la función...
     ackData.then((response) => {
       setproductList(response);
     });
-  }, []);
+  }, [jsonData, data]);
 
   return (
-    <>
+    <Container>
       <Row className="item-list-container">
-        <Col md={12} className="d-flex justify-content-center">
+        <Col md={3}>
+          <h1>{jsonData}</h1>
+          <hr />
+        </Col>
+        <Col md={9} className="d-flex justify-content-center">
           <Row>
             <ItemList items={productList} />
           </Row>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 }
 
