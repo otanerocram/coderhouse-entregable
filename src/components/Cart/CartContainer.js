@@ -1,6 +1,13 @@
 import { Card, Button, Container } from "react-bootstrap";
 
+import { CartContextUse } from "../context/CartContext";
+
 const CartContainer = () => {
+
+  const { clear, removeItem, cart } = CartContextUse();
+
+  console.log(cart);
+
   return (
     <Container className="mt-4">
       <Card>

@@ -10,9 +10,7 @@ import accesoriesData from "../data/accesories.json";
 
 const ItemDetailContainer = () => {
   const [itemInfo, setItemInfo] = useState(0);
-
   let { url, path } = useRouteMatch();
-  console.log(path);
 
   useEffect(() => {
     const myarr = url.split("/");

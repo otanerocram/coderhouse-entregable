@@ -5,8 +5,6 @@ function Item(props) {
   const { id, title, pictureUrl, price } = props.props;
 
   let { path, url } = useRouteMatch();
-  console.log(path)
-
 
   return (
     <div className="col-sm-6 col-md-3">
