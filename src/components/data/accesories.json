@@ -5,7 +5,8 @@
     "description": "Mochila Targus LEGEND IQ Black 16",
     "price": 159,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/4/_/4_12_3.jpg",
-    "stock": 13
+    "stock": 13,
+    "buy": 0
   },
   {
     "id": "acc02",
@@ -13,7 +14,8 @@
     "description": "Disco duro Hibrido Wester digital Black2 DUAL DRIVE 1 TB + 120 SSD de 2.5",
     "price": 799,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/1/_/1_11_28_2.jpg",
-    "stock": 14
+    "stock": 14,
+    "buy": 0
   },
   {
     "id": "acc03",
@@ -21,7 +23,8 @@
     "description": "MOUSE Cougar Revenger Gaming RGB 12000 DPI (CGR-WOMI-REV)",
     "price": 199,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/7/_/7_2_93.jpg",
-    "stock": 17
+    "stock": 17,
+    "buy": 0
   },
   {
     "id": "acc04",
@@ -29,7 +32,8 @@
     "description": "Wacom Pen Tablet Intuos5 Touch Small",
     "price": 959,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/w/a/wacom_pth451_intuos_pro_professional_pen_1002452.jpg",
-    "stock": 9
+    "stock": 9,
+    "buy": 0
   },
   {
     "id": "acc05",
@@ -37,6 +41,7 @@
     "description": "Switch HP OfficeConnect 1410 24 - 24 Puertos Fast Ethernet 10,100 - No Administrable",
     "price": 369,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/s/w/sw-1_1.jpg",
-    "stock": 11
+    "stock": 11,
+    "buy": 0
   }
 ]

@@ -7,19 +7,21 @@ const ItemDetail = ({ itemInfo }) => {
 
   const { addItem } = CartContextUse();
 
-  const item = {
-    id: id,
-    title: title,
-    description: description,
-    price: price
-  }
-
   const product = {
     id: id,
     stock: stock,
     initial: 1,
     onAdd: (stock, cantidad) => {
-      addItem(item, cantidad);
+
+      const item = {
+        id: id,
+        title: title,
+        description: description,
+        price: price,
+        qty: cantidad
+      }
+
+      addItem({...item});
       return stock - cantidad;
     },
     precio: price,

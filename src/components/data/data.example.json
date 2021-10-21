@@ -5,7 +5,8 @@
     "description": "xxx",
     "price": 2399,
     "pictureUrl": "xxx",
-    "stock": 10
+    "stock": 10,
+    "buy": 0
   },
   {
     "id": "xxx",
@@ -13,7 +14,8 @@
     "description": "xxx",
     "price": 2299,
     "pictureUrl": "xxx",
-    "stock": 11
+    "stock": 11,
+    "buy": 0
   },
   {
     "id": "xxx",
@@ -21,7 +23,8 @@
     "description": "xxx",
     "price": 4299,
     "pictureUrl": "xxx",
-    "stock": 12
+    "stock": 12,
+    "buy": 0
   },
   {
     "id": "xxx",
@@ -29,6 +32,7 @@
     "description": "xxx",
     "price": 4299,
     "pictureUrl": "xxx",
-    "stock": 12
+    "stock": 12,
+    "buy": 0
   }
 ]

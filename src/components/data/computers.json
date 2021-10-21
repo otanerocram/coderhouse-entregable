@@ -5,7 +5,8 @@
     "description": "AMD Ryzen 3 3250U 2.6GHz, RAM 8 GB, HDD 1TB, Wi-FI, BT, DVD, LED 21.5' Full HD, Windows 10 home SP",
     "price": 2399,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/5/_/5_28_4.jpg",
-    "stock": 10
+    "stock": 10,
+    "buy": 0
   },
   {
     "id": "comp02",
@@ -13,7 +14,8 @@
     "description": "Intel Core i3-10100 3.6GHz, RAM 4GB, HDD 1TB, Wi-FI, BT, DVD, Windows 10 Home + Monitor HP V22 - 21.5",
     "price": 2299,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/h/p/hp-slim-desktop-s01-pf-.jpg",
-    "stock": 11
+    "stock": 11,
+    "buy": 0
   },
   {
     "id": "comp03",
@@ -21,6 +23,7 @@
     "description": "Intel core i5-9400T 1.80GHz, RAM 8GB, HDD 1 TB + Sólido SSD 256GB, Wi-FI, BT, LED 23.8' Full HD Táctil, Windows 10 Pro",
     "price": 4299,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/7/_/7_11_7_2.jpg",
-    "stock": 12
+    "stock": 12,
+    "buy": 0
   }
 ]

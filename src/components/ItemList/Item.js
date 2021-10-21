@@ -7,7 +7,7 @@ function Item(props) {
   let { path, url } = useRouteMatch();
 
   return (
-    <div className="col-sm-6 col-md-3">
+    <div className="col-sm-6 col-md-4">
       <NavLink to={`${url}/${id}`} className="item-link" activeClassName="actite-item-link">
         <Card>
           <Card.Img variant="top" src={pictureUrl} width="60%" />

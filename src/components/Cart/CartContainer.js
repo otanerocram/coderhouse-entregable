@@ -13,9 +13,13 @@ const CartContainer = () => {
       <Card>
         <Card.Header>Carrito</Card.Header>
         <Card.Body>
-          <Card.Title>El contenido de tu carrito</Card.Title>
-          <Card.Text>Aquí aparecerá el contenido de tu carrito</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <ul>
+            {
+              cart.map((el, idx) => (
+                <li key={idx}>{el.product.title} --> {el.product.qty}</li>
+              ))
+            }
+          </ul>
         </Card.Body>
       </Card>
     </Container>

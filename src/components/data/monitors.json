@@ -5,7 +5,8 @@
     "description": "Full HD (1920x1080), HDMI / VGA / Audio / micro borde",
     "price": 999,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/5/_/5_25_15.jpg",
-    "stock": 3
+    "stock": 3,
+    "buy": 0
   },
   {
     "id": "mon02",
@@ -13,7 +14,8 @@
     "description": "IPS WLED QHD (2560x1440), HDMI, DP, USB, USB Tipo-C, 16:9, 350 nits, 4 ms, Ajustes de inclinación, altura, giro y pivote (vertical), VESA",
     "price": 1699,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/1/_/1_54_36.jpg",
-    "stock": 4
+    "stock": 4,
+    "buy": 0
   },
   {
     "id": "mon03",
@@ -21,7 +23,8 @@
     "description": "Curvo Gaming WLED 27' Razer Edition, Frecuencia 144Hz Extreme R1800 Panel, Full HD, NVIDIA G-SYNC, HDMI, Display Port, USB 3.0",
     "price": 1799,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/1/_/1_35_9.jpg",
-    "stock": 5
+    "stock": 5,
+    "buy": 0
   },
   {
     "id": "mon04",
@@ -29,6 +32,7 @@
     "description": "IPS WLED QHD (2560x1440), HDMI, DP, 16:9, 300 nits, 4 ms, Antirreflectante, AMD FreeSync, VESA",
     "price": 2499,
     "pictureUrl": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/l/e/lenovo-q27q-1.jpg",
-    "stock": 6
+    "stock": 6,
+    "buy": 0
   }
 ]
