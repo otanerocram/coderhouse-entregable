@@ -1,27 +1,43 @@
 import { Row, Col, Card } from "react-bootstrap";
-import ItemCount from "./ItemCount";
 import { CartContextUse } from "../context/CartContext";
+import { useAlert } from "react-alert";
+import { NavLink } from "react-router-dom";
+import ItemCount from "./ItemCount";
+import useSound from "use-sound";
+import cashMP3 from "../../audio/cash.mp3"
 
 const ItemDetail = ({ itemInfo }) => {
   const { title, stock, price, pictureUrl, description, id } = itemInfo;
-
+  const alert = useAlert();
   const { addItem } = CartContextUse();
+
+  const [play] = useSound(cashMP3);
 
   const product = {
     id: id,
     stock: stock,
     initial: 1,
     onAdd: (stock, cantidad) => {
-
       const item = {
         id: id,
         title: title,
         description: description,
         price: price,
-        qty: cantidad
-      }
+        qty: cantidad,
+      };
 
-      addItem({...item});
+      addItem({ ...item });
+
+      alert.show(
+        <>
+          <p>
+            Se agregó {cantidad} {title} a su carrito de compras
+          </p>
+          <br />
+          <NavLink to="/cart" className="btn btn-primary">Ir al Carrito</NavLink>
+        </>
+      );
+      play();
       return stock - cantidad;
     },
     precio: price,

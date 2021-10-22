@@ -1,5 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { useAlert } from "react-alert";
+import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
@@ -9,7 +8,6 @@ export const CartContextUse = () => {
 
 export default function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
-  const alert = useAlert();
 
   const clear = () => {
     setCart([]);
@@ -38,7 +36,7 @@ export default function CartContextProvider({ children }) {
         console.log("Carrito vacio");
         found = false;
       } else {
-        const exists = cart.find((e) => e.product.id == thisId);
+        const exists = cart.find((e) => e.product.id === thisId);
 
         if (typeof exists === "undefined") {
           console.log("Carrito no está vacio, ID no existe");
@@ -71,8 +69,6 @@ export default function CartContextProvider({ children }) {
       setCart(newCart);
       console.log(`Updating... ItemID: ${id}!`);
     }
-
-    alert.show(`Se agregó ${qty} ${title} a su carrito de compras`);
   };
 
   return (

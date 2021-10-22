@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { CartContextUse } from "../context/CartContext";
 
-function CartWidget(props) {
+function CartWidget() {
   const { totalProducts } = CartContextUse();
 
   return (
