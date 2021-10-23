@@ -41,6 +41,7 @@ function ItemListContainter({ data }) {
     });
 
     ackData.then((response) => {
+      console.log(response);
       setproductList(response);
     });
   }, [jsonData, data]);

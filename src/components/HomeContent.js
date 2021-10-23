@@ -1,7 +1,22 @@
-import React from "react";
+import { useEffect } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import mydb from "../firebase/firebaseConfig";
 
 const HomeContent = () => {
+  useEffect(() => {
+    const obtenerDatos = async () => {
+      const datos = await getDocs(collection(mydb, "laptops"));
+      console.log(datos);
+      datos.forEach((doc) => {
+        // console.log(`${doc.id} => ${JSON.parse(doc.data())}`);
+        console.log(doc.data());
+      });
+    };
+
+    obtenerDatos();
+  }, []);
+
   return (
     <>
       <Carousel>
