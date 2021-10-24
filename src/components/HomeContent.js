@@ -1,19 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import mydb from "../firebase/firebaseConfig";
 
 const HomeContent = () => {
-  useEffect(() => {
-    const obtenerDatos = async () => {
-      const datos = await getDocs(collection(mydb, "laptops"));
-      console.log(datos);
-      datos.forEach((doc) => {
-        // console.log(`${doc.id} => ${JSON.parse(doc.data())}`);
-        console.log(doc.data());
-      });
-    };
+  const [laptops, setLaptops] = useState([]);
 
+  const obtenerDatos = async () => {
+    const datos = await getDocs(collection(mydb, "laptops"));
+
+    datos.map(doc => console.log(doc))
+  
+    // datos.forEach((doc) => {
+    //   console.log(`${doc.id} => ${JSON.parse(doc.data())}`);
+    //   setLaptops(datos.map((doc) => doc.data()));
+
+    //   const newLaptops = [...laptops, doc.data()];
+    //   setLaptops(newLaptops);
+    //   console.log(doc.data());
+    //   console.log(laptops);
+    // });
+  };
+
+
+
+  useEffect(() => {
+    console.log("use effect")
+    
     obtenerDatos();
   }, []);
 
